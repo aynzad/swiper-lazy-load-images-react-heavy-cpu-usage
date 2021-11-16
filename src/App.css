@@ -43,3 +43,12 @@ body {
   object-fit: cover;
   width: 100%;
 }
+
+/* Possible fix */
+/* .swiper-lazy-preloader {
+  animation: none !important;
+}
+
+.swiper-slide-active .swiper-lazy-preloader {
+  animation: swiper-preloader-spin 1s infinite linear !important;
+} */
