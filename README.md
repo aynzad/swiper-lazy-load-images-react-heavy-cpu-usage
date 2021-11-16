@@ -1,4 +1,45 @@
-# Getting Started with Create React App
+
+### Reproduction link
+
+https://swiper-lazy-load-images-react-heavy-cpu-usage.vercel.app/
+
+https://github.com/aynzad/swiper-lazy-load-images-react-heavy-cpu-usage
+
+### Bug description
+
+When Swiper with Lazy Images module is used, CPU usage is always high on the page even when there is no activity.
+
+There will be a major issue when a page contains a lot of sliders using Swiper with lazy images that are using a lot of CPU power (in Chrome's Task Manager) and `Style recalcs / sec`, even when there is no activity.
+
+### Expected Behavior
+
+On basic usage like pagination and scrolling, CPU usage and `Style recalcs / sec` should not be noticeable heavy.
+On idle (no activity) there should be minimum CPU usage with zero `Style recalcs / sec`
+
+<img width="976" alt="Screen Shot 2021-11-16 at 4 28 01 PM" src="https://user-images.githubusercontent.com/3133497/141990302-66dd2910-7aa6-4c1d-9ed9-d4d0ffc8f9f8.png">
+
+
+
+### Actual Behavior
+
+On basic usage like pagination and scrolling, CPU usage and `Style recalcs / sec` are noticeable heavy.
+On idle (no activity) there is heavy CPU usage with continuously changing `Style recalcs / sec`
+
+
+<img width="975" alt="Screen Shot 2021-11-16 at 4 26 30 PM" src="https://user-images.githubusercontent.com/3133497/141989413-dc868578-2f2b-48e1-b3b3-8ae13c693bc5.png">
+
+
+
+
+### Swiper version
+
+7.2.0
+
+### Platform/Target and Browser Versions
+
+macOS 12.0.1, Chrome 92.0.45, Safari 15.1 
+
+--------
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -10,61 +51,3 @@ In the project directory, you can run:
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
